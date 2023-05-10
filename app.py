@@ -63,7 +63,7 @@ with left_left:
     st.subheader(f"{df_selection.shape[0]}") # comma en mil
 with left:
     st.subheader("Ventas Totales:")
-    st.subheader(f"USD $ {ventas_totales:,}") # comma en mil
+    st.subheader(f"{ventas_totales:,}$ USD") # comma en mil
 with middle:
     st.subheader("Promedio Rating:")
     st.subheader(f"{avg_ratings}/10 {estrellas}") # comma en mil
@@ -123,3 +123,12 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
+text = "Nicolas Coddou"
+centered_text = f"<p><center>{text}</center><p>"
+text = "2023"
+centered_año = f"<p><center>{text}</center><p>"
+
+
+st.markdown(centered_text, unsafe_allow_html=True)
+st.markdown(centered_año, unsafe_allow_html=True)
