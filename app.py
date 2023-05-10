@@ -14,3 +14,11 @@ df = pd.read_excel("supermarkt_sales.xlsx",
                     nrows=1000)
 
 st.dataframe(df)
+
+# Barra
+st.sidebar.header("Filtros:")
+coudad = st.sidebar.multiselect(
+    "Seleccione Ciudad:",
+    options= df["City"].unique(),
+    default=df["City"].unique()
+    )
